@@ -59,6 +59,17 @@ function agregarFila(tabla, id, nombre) {
     cellAcciones.innerHTML = '<button class="btn-editar">Editar</button> <button class="btn-eliminar">Eliminar</button>';
 }
 
+function agregarFila(tabla, id, nombre) {
+    var row = tabla.insertRow();
+    var cellId = row.insertCell(0);
+    var cellNombre = row.insertCell(1);
+    var cellAcciones = row.insertCell(2);
+
+    cellId.textContent = id;
+    cellNombre.textContent = nombre;
+    cellAcciones.innerHTML = '<button class="btn-editar">Editar</button> <button class="btn-eliminar">Eliminar</button>';
+}
+
 var tablaEstudiantes = document.querySelector("#contenedorEstudiantes table tbody");
 var btnAgregarEstudiante = document.getElementById("agregarEstudiante");
 if (btnAgregarEstudiante) {
@@ -81,15 +92,4 @@ if (btnAgregarAsignatura) {
             agregarFila(tablaAsignaturas, id, nombre);
         }
     });
-}
-
-function agregarFila(tabla, id, nombre) {
-    var row = tabla.insertRow();
-    var cellId = row.insertCell(0);
-    var cellNombre = row.insertCell(1);
-    var cellAcciones = row.insertCell(2);
-
-    cellId.textContent = id;
-    cellNombre.textContent = nombre;
-    cellAcciones.innerHTML = '<button class="btn-editar">Editar</button> <button class="btn-eliminar">Eliminar</button>';
 }
