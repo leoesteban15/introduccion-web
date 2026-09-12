@@ -1,1 +1,1 @@
-Primer commit
+Ejercicio de HTML, CSS y JavaScript sobre una dashboard de usuarios con login para comprender funcionalidad y uso de las tres tecnologias
